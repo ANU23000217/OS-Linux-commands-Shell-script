@@ -99,6 +99,7 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/e74cc399-e869-4514-9294-e4d66bdbb553)
 
 
 
@@ -106,10 +107,12 @@ cut -c1-3 file11
 cut -d "|" -f 1 file22
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/45a81470-3b96-4c0b-9c34-21ef65d280c1)
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/81235175-e464-4178-a1da-d78a36605b9b)
 
 
 cat < newfile 
