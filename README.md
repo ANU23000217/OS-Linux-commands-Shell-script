@@ -128,28 +128,33 @@ hello world
 grep Hello newfile 
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/7d5dc360-1c3a-4ec4-9367-a9d3ebf3da9d)
 
 
 grep hello newfile 
 ## OUTPUT
 
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/3b622860-62e3-4eba-88ad-9644765927df)
 
 
 grep -v hello newfile 
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/0a4e551a-c35b-4f53-a343-e0c41baeefdf)
 
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/10be401c-081e-4138-af1f-88aa41158c77)
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/a2eb2603-767e-486a-bb38-c9e1f53f51a3)
 
 
 
@@ -160,6 +165,7 @@ grep -R ubuntu /etc
 
 grep -w -n world newfile   
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/cb370c18-be74-432d-9314-51f331acf7df)
 
 
 cat < newfile 
@@ -183,16 +189,21 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/2d621e3e-9f9a-44ac-a6db-043fdba5cc21)
 
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/f2413676-3063-4310-9007-e31987305c59)
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
+
+
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/7a74a2cf-5316-47fc-8448-8cae00930409)
 
 
 
