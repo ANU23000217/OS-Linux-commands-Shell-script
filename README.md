@@ -42,23 +42,40 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
+```
+chanchal singhvi
+c.k. shukla
+s.n. dasgupta
+sumit chakrobarty
+^d
+```
 
 
 cat < file2
 ## OUTPUT
-
+cat > file2
+```
+anil aggarwal
+barun sengupta
+c.k. shukla
+lalit chowdury
+s.n. dasgupta
+^d
+```
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ ![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/3d17b2b3-39c8-43a8-abdc-519c900acba8)
+
 comm file1 file2
  ## OUTPUT
+![Screenshot 2024-02-12 113955](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9f15abc6-fa53-4ce6-9690-41d0c5527c64)
 
  
 diff file1 file2
 ## OUTPUT
+![Screenshot 2024-02-12 114122](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/6f0df5d6-6dc0-473f-8764-8f8788dc1423)
 
 
 #Filters
