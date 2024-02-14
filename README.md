@@ -1,4 +1,4 @@
-# OS-Linux-commands-Shell-scripting
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/bb0996f5-ce24-4e10-8183-95830a7e6fae)# OS-Linux-commands-Shell-scripting
 Operating systems Lab exercise
 # Linux commands-Shell scripting
 Linux commands-Shell scripting
@@ -211,42 +211,51 @@ egrep -w '(H|h)ell[a-z]' newfile
 egrep '(^hello)' newfile 
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/2097ab41-753f-4c27-bf30-f3c2b3edd826)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/d6105214-5e17-4bcf-82c9-256ac369f797)
 
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/d3019e06-e463-45ab-bf66-985f54a7edb9)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/c0c28d29-8373-4c75-b10a-e3a1ee97271a)
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/d525b4d0-ceaf-456e-b23e-98fc98180629)
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/b3b81c41-51b4-406b-b712-21a2a4c9d97c)
 
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/6bb38c3a-f787-4522-9190-8a797f9ec430)
 
 
 egrep l{2} newfile
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/82fd9878-0b30-4a54-8ab5-18dd15381f65)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+cat ![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/c92a0337-816f-4d2f-a34d-6748b3cb1bee)
 
 
 cat > file23
@@ -266,6 +275,7 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/a648b63d-4908-491b-83e2-15d2a6549860)
 
 
 sed -n -e '$p' file23
@@ -275,32 +285,38 @@ sed -n -e '$p' file23
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/084144ca-9506-4676-8b2a-4ce86686c9e6)
 
 
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/033e8dc7-f710-400f-9fa0-78d15ed14fce)
 
 
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/b67f110e-2c70-4583-a1be-a37ad91ad49d)
 
 
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/4539c59e-1967-4511-aa85-02e0193a1e13)
 
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/30234a9f-dd11-4ae5-b7a5-9045148072a0)
 
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9a68ec8b-c637-4d4f-b099-279531805f0b)
 
 
 
@@ -308,36 +324,46 @@ seq 10
 ## OUTPUT
 
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/a6426c76-366f-4acd-9a74-05d4c22cd1ef)
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/be70bf5e-1699-41fc-aa85-bdcde8e946ca)
 
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/4dae8842-394b-4660-98d8-f1ff6de58121)
 
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/98a1731b-3015-45f1-ba23-6cb031f09c8d)
 
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/37f79adc-6b21-4499-bbfa-d74aeae1461a)
 
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9c4330d4-0447-451d-a81a-cf358636d16d)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/da40ce9b-3d87-4252-90db-988a1f344a81)
 
 
 
 sed -n '2,4{s/$/*/;p}' file23
+## OUTPUT
+
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/3459be51-4d3f-4d3b-a8ad-e63a1fcadd62)
 
 
 #Sorting File content
@@ -351,6 +377,8 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/6ddff4be-6d23-46ab-9e48-2d436930fea3)
+
 
 
 cat > file22
@@ -365,12 +393,16 @@ cat > file22
 uniq file22
 ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/0b50c2dc-0ef6-4965-92c6-5b0ff5735bd1)
 
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/734761d9-86e9-4b02-9948-1a8de5e92c36)
+
+ 
 
 cat < urllist.txt
 ```
