@@ -420,16 +420,21 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9a10a40c-28d3-4c0d-929f-609b1615fb79)
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/2499ab97-1897-440e-b6b7-2d2f3a95a31a)
 
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
+![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/7f1581bd-5f95-4e4e-866f-1699b6f40de5)
+
+
 
 
 mkdir backupdir
