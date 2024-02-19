@@ -583,6 +583,15 @@ www.mrcet.com
 tar -cvf backup.tar *
 ## OUTPUT
 ```
+bench.py
+file21
+file22
+file23
+hello.c
+hello.js
+newfile
+readme.txt
+urllist.txt
 
 ```
 
@@ -594,10 +603,14 @@ mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-
-
+```
+tar: can't open 'backup.tar': No such file or directory
+```
 tar -xvf backup.tar
 ## OUTPUT
+```
+tar: can't open 'backup.tar': No such file or directory
+```
 
 gzip backup.tar
 
@@ -628,6 +641,11 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+```
+hello in this world
+i cant stop
+for this non stop movement
+```
 
 
 cat < scriptest.sh 
