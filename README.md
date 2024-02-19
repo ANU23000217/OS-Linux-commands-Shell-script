@@ -66,17 +66,39 @@ s.n. dasgupta
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- ![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/3d17b2b3-39c8-43a8-abdc-519c900acba8)
+ ```
+file1 file2 differ: char 1, line 1
+```
 
 comm file1 file2
  ## OUTPUT
-![Screenshot 2024-02-12 113955](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9f15abc6-fa53-4ce6-9690-41d0c5527c64)
-
+```
+        anil aggarwal
+        barun sengupta
+        c.k. shukla
+chanchal singhvi
+c.k. shukla
+        lalit chowdury
+                s.n. dasgupta
+ 
+sumit chakrobarty
+```
  
 diff file1 file2
 ## OUTPUT
-![Screenshot 2024-02-12 114122](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/6f0df5d6-6dc0-473f-8764-8f8788dc1423)
-
+```
+--- file1
++++ file2
+@@ -1,4 +1,6 @@
+-chanchal singhvi
++anil aggarwal
++barun sengupta
+ c.k. shukla
++lalit chowdury
+ s.n. dasgupta
+-sumit chakrobarty
++
+```
 
 #Filters
 
@@ -99,22 +121,29 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/e74cc399-e869-4514-9294-e4d66bdbb553)
+```
+Hel
+Thi
+```
 
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/45a81470-3b96-4c0b-9c34-21ef65d280c1)
-
+```
+1001
+1002
+1003
+```
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/81235175-e464-4178-a1da-d78a36605b9b)
-
-
+```
+ Ram
+ tom
+ Joe
+```
 cat < newfile 
 ```
 Hello world
@@ -127,46 +156,53 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/7d5dc360-1c3a-4ec4-9367-a9d3ebf3da9d)
+```
+Hello world
+```
 
 
 grep hello newfile 
 ## OUTPUT
 
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/3b622860-62e3-4eba-88ad-9644765927df)
-
+```
+hello world
+```
 
 grep -v hello newfile 
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/0a4e551a-c35b-4f53-a343-e0c41baeefdf)
-
-
+```
+Hello world
+```
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/10be401c-081e-4138-af1f-88aa41158c77)
+```
+Hello world
+hello world
 
+````
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/a2eb2603-767e-486a-bb38-c9e1f53f51a3)
+```
+2
+```
 
 
 
-grep -R ubuntu /etc
-## OUTPUT
 
 
 
 grep -w -n world newfile   
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/cb370c18-be74-432d-9314-51f331acf7df)
-
+```
+1:Hello world
+2:hello world
+```
 
 cat < newfile 
 ```
@@ -189,21 +225,28 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/2d621e3e-9f9a-44ac-a6db-043fdba5cc21)
-
+```
+Hello world
+hello world
+```
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/f2413676-3063-4310-9007-e31987305c59)
+```
+Hello world
+hello world
+```
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/7a74a2cf-5316-47fc-8448-8cae00930409)
+```
+Hello world
+hello world
+```
 
 
 
@@ -211,47 +254,58 @@ egrep -w '(H|h)ell[a-z]' newfile
 egrep '(^hello)' newfile 
 ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/2097ab41-753f-4c27-bf30-f3c2b3edd826)
-
+```
+hello world
+```
 
 egrep '(world$)' newfile 
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/d6105214-5e17-4bcf-82c9-256ac369f797)
-
+```
+Hello world
+hello world
+```
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/d3019e06-e463-45ab-bf66-985f54a7edb9)
-
+```
+Linux is best in this World
+```
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/c0c28d29-8373-4c75-b10a-e3a1ee97271a)
-
+```
+Hello world
+hello world
+Linux is best in this World
+```
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/d525b4d0-ceaf-456e-b23e-98fc98180629)
-
+```
+Linux is world number 1
+```
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/b3b81c41-51b4-406b-b712-21a2a4c9d97c)
-
+```
+Linux is world number 1
+```
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/6bb38c3a-f787-4522-9190-8a797f9ec430)
+```
+Linux is best in this World
+```
 
 
 egrep l{2} newfile
 ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/82fd9878-0b30-4a54-8ab5-18dd15381f65)
-
+```
+Hello world
+hello world
+```
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
