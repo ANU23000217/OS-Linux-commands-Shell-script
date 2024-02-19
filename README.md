@@ -309,8 +309,11 @@ hello world
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-cat ![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/c92a0337-816f-4d2f-a34d-6748b3cb1bee)
-
+```
+Linux is world number 1
+Unix is predecessor
+Linux is best in this World
+```
 
 cat > file23
 ```
@@ -328,97 +331,167 @@ cat > file23
 
 sed -n -e '3p' file23
 ## OUTPUT
+```
+1002 | tom |  5000 | Admin
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/a648b63d-4908-491b-83e2-15d2a6549860)
+```
 
 
 sed -n -e '$p' file23
 ## OUTPUT
+```
+1001 | Ram | 10000 | HR
+
+```
 
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/084144ca-9506-4676-8b2a-4ce86686c9e6)
-
+```
+1001 | Sita | 10000 | HR
+1001 | Sita | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Sita | 10000 | HR
+```
 
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/033e8dc7-f710-400f-9fa0-78d15ed14fce)
-
-
+```
+1001 | Ram | 10000 | HR
+1001 | Sita | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
+```
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/b67f110e-2c70-4583-a1be-a37ad91ad49d)
+```
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  6000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
+```
 
 
 
 sed -n -e '1,5p' file23
 ## OUTPUT
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/4539c59e-1967-4511-aa85-02e0193a1e13)
-
+```
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+```
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/30234a9f-dd11-4ae5-b7a5-9045148072a0)
-
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+```
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9a68ec8b-c637-4d4f-b099-279531805f0b)
-
-
-
+```
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+```
 seq 10 
 ## OUTPUT
 
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/a6426c76-366f-4acd-9a74-05d4c22cd1ef)
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/be70bf5e-1699-41fc-aa85-bdcde8e946ca)
+```
+4
+5
+6
+```
 
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/4dae8842-394b-4660-98d8-f1ff6de58121)
 
-
+```
+sed: no address after comma
+```
 
 seq 3 | sed '2a hello'
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/98a1731b-3015-45f1-ba23-6cb031f09c8d)
-
-
+```
+1
+2
+hello
+3
+```
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/37f79adc-6b21-4499-bbfa-d74aeae1461a)
+```
+1
+hello
+2
+
+```
 
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9c4330d4-0447-451d-a81a-cf358636d16d)
+```
+
+1
+hello
+10
+```
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/da40ce9b-3d87-4252-90db-988a1f344a81)
+```
+$1001 | Ram | 10000 | HR
+$1002 | tom |  5000 | Admin
+$1003 | Joe |  7000 | Developer
 
-
-
+```
 sed -n '2,4{s/$/*/;p}' file23
 ## OUTPUT
+```
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/3459be51-4d3f-4d3b-a8ad-e63a1fcadd62)
-
+1001 | Ram | 10000 | HR*
+1002 | tom |  5000 | Admin*
+1003 | Joe |  7000 | Developer*
+```
 
 #Sorting File content
 cat > file21
@@ -431,10 +504,13 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/6ddff4be-6d23-46ab-9e48-2d436930fea3)
-
-
-
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1004 | Sit |  7000 | Dev
+1005 | Sam |  5000 | HR
+```
 cat > file22
 ```
 1001 | Ram | 10000 | HR
@@ -446,17 +522,29 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/0b50c2dc-0ef6-4965-92c6-5b0ff5735bd1)
-
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+```
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/734761d9-86e9-4b02-9948-1a8de5e92c36)
+```
+1001 | RAM | 10000 | HR
+1001 | RAM | 10000 | HR
+1002 | TOM |  5000 | ADMIN
+1003 | JOE |  7000 | DEVELOPER
+1005 | SAM |  5000 | HR
+1004 | SIT |  7000 | DEV
+1003 | JOE |  7000 | DEVELOPER
+1001 | RAM | 10000 | HR
 
- 
+```
 
 cat < urllist.txt
 ```
@@ -474,20 +562,29 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/9a10a40c-28d3-4c0d-929f-609b1615fb79)
+```
+
+www.yahoo.com
+www.google.com
+www.mrcet....com
+```
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/2499ab97-1897-440e-b6b7-2d2f3a95a31a)
-
+```
+www.yahoo.com
+www.google.com
+www.mrcet.com
+```
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-![image](https://github.com/ANU23000217/OS-Linux-commands-Shell-script/assets/139117108/7f1581bd-5f95-4e4e-866f-1699b6f40de5)
+```
 
+```
 
 
 
