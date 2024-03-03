@@ -684,25 +684,52 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
+```
+
+./scriptest.sh: line 1: #!/bin/sh: No such file or directory
+“File name is ./scriptest.sh ”
+File name is  scriptest.sh
+“First arg. is ” 1
+“Second arg. is ” 2
+“Third arg. is ” 3
+“Fourth arg. is ”
+The $@ is  1 2 3
+The $\# is  1#
+The $$ is  14337
+    PID TTY          TIME CMD
+  13614 pts/1    00:00:00 bash
+  14337 pts/1    00:00:00 bash
+  14340 pts/1    00:00:00 ps
+```
 
  
 ls file1
 ## OUTPUT
+```
+file1
+```
 
 echo $?
 ## OUTPUT 
+```
+0
+```
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
+```
+127
+```
  
 abcd
  
 echo $?
  ## OUTPUT
-
-
+ ```
+127
+```
  
 # mis-using string comparisons
 
@@ -740,7 +767,12 @@ chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
+```
 
+./strcomp.sh: line 1: #!/bin/bash: No such file or directory
+baseball is less than hockey
+./strcomp.sh: line 10: ^d: command not found
+```
 
 # check file ownership
 cat < psswdperm.sh 
@@ -767,6 +799,10 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+```
+bash: ./psswdperm.sh: Permission denied
+```
+
 
 # check if with file location
 cat>ifnested.sh 
@@ -814,7 +850,15 @@ fi
 ./ifnested.sh 
 ## OUTPUT
 
+```
 
+./ifnested.sh: line 1: #!/bin/bash: No such file or directory
+“/home/sec The object exists, is it a file?”
+“No,/home/sec it is not a file!”
+“But /home/sec/.bash_history is a file!”
+./ifnested.sh: line 18: ^d: command not found
+
+```
 
 # using numeric test comparisons
 cat > iftest.sh 
@@ -856,7 +900,14 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-##OUTPUT
+## OUTPUT
+```
+“The test value 10 is greater than 5”
+“The values are different”
+./iftest.sh: line 14: ^d: command not found
+```
+
+
 
 # check if a file
 cat > ifnested.sh 
@@ -905,7 +956,17 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
-##OUTPUT
+## OUTPUT
+```
+
+./ifnested.sh: line 1: #!/bin/bash: No such file or directory
+“/home/sec The object exists, is it a file?”
+“No,/home/sec it is not a file!”
+“But /home/sec/.bash_history is a file!”
+./ifnested.sh: line 18: ^d: command not found
+
+```
+
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -934,7 +995,11 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
+```
+./elifcheck.sh: line 1: #!/bin/bash: No such file or directory
+Sorry, you are not allowed here
 
+```
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -950,6 +1015,10 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+```
+./ifcompound.sh: line 1: #!/bin/bash: No such file or directory
+The file exists and you can write to it
+```
 
 # using the case command
 cat >casecheck.sh 
@@ -969,7 +1038,11 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
- 
+
+ ## Output
+ ```
+Sorry, you are not allowed here
+```
 cat > whiletest
 ```bash
 #!/bin/bash
@@ -984,7 +1057,20 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
+ ## Output
+ ```
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+```
  
 cat untiltest.sh 
 ```bash
@@ -997,7 +1083,16 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
- 
+ $./untiltest.sh 
+ ## Output 
+ ```
+./untiltest.sh: line 1: #using: command not found
+100
+75
+50
+25
+
+```
  
  
 cat forin1.sh 
@@ -1011,7 +1106,22 @@ done
  ```
  
 $ chmod 755 forin1.sh
- 
+
+ $ ./forin1.sh
+
+ ## Output
+ ```
+./forin1.sh: line 1: #!/bin/bash: No such file or directory
+./forin1.sh: line 2: #basic: command not found
+The next state is Alabama
+The next state is Alaska
+The next state is Arizona
+The next state is Arkansas
+The next state is California
+The next state is Colorado
+
+```
+
  
 cat forin2.sh 
 ```bash
@@ -1022,6 +1132,7 @@ do
 echo “word:$test”
 done
  ```
+
  
 $ chmod 755 forin2.sh
  
@@ -1037,7 +1148,14 @@ done
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
- 
+ ## Output 
+ ```
+./forin2.sh: line 1: #!/bin/bash: No such file or directory
+./forin2.sh: line 2: #: command not found
+“word:I”
+“word:dont know if thisll”
+“word:work”
+```
 cat forin3.sh 
 ```bash
 \#!/bin/bash
@@ -1060,7 +1178,17 @@ done
 ```
 $ chmod 755 forin1.sh
 
+./forin1.sh
+
 ## OUTPUT
+```
+The next state is Alabama
+The next state is Alaska
+The next state is Arizona
+The next state is Arkansas
+The next state is California
+The next state is Colorado
+```
 cat forinfile.sh 
 ```bash
 #!/bin/bash
