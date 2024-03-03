@@ -761,17 +761,17 @@ fi
 ```
 ##OUTPUT
 
-
+```
+baseball is less than hockey
+```
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
 ```
+You are the owner of the /etc/passwd file
 
-./strcomp.sh: line 1: #!/bin/bash: No such file or directory
-baseball is less than hockey
-./strcomp.sh: line 10: ^d: command not found
 ```
 
 # check file ownership
@@ -1390,9 +1390,27 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
+
  ./argshift.sh 1 2 3
- 
+ ## OUTPUT
+ ```
+locathost:~# awk -f nc.awk data.dat
+7         bcdfghj
+8	  abcdfghj
+7	  bcdfghj
+8  	  ebcdfghj
+7	  bcdfghhj
+8	  ibcdfghj
+7	  bcdfghj
+8	  obcdfghj
+7	  bcdfghj
+8 	  ubcdfghj
+total characters 75
+Number of Lines are 10
+No of Words count: 10
+localhost:~#
+
+```
  
 cat > nc.awk
 ```bash
@@ -1423,6 +1441,25 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
+
+```
+locathost:~# chmod 755 palindrome.sh
+locathost:~# ./palindrome.sh
+Enter the number
+21
+Number is NOT palindrome
+```
+
+```
+locathost:~# chmod 755 palindrome.sh
+locathost:~# ./palindrome.sh
+Enter the number
+33
+Number is palindrome
+locathost:~#
+
+
+```
  
 cat > palindrome.sh
 ```bash
