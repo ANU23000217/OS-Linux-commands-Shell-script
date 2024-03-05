@@ -691,7 +691,7 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
-
+```
 ./scriptest.sh: line 1: #!/bin/sh: No such file or directory
 “File name is ./scriptest.sh ”
 File name is  scriptest.sh
@@ -708,7 +708,11 @@ The $$ is  14337
   14340 pts/1    00:00:00 ps
 ```
 
- 
+ ls file1
+ ## Output
+ ```
+file1
+```
 echo $?
 ## OUTPUT
 ```
@@ -858,11 +862,10 @@ fi
 
 ```
 
-./ifnested.sh: line 1: #!/bin/bash: No such file or directory
+
 “/home/sec The object exists, is it a file?”
 “No,/home/sec it is not a file!”
 “But /home/sec/.bash_history is a file!”
-./ifnested.sh: line 18: ^d: command not found
 
 ```
 
@@ -964,12 +967,9 @@ $ chmod 755 ifnested.sh
 $ ./ifnested.sh 
 ## OUTPUT
 ```
-
-./ifnested.sh: line 1: #!/bin/bash: No such file or directory
 “/home/sec The object exists, is it a file?”
 “No,/home/sec it is not a file!”
 “But /home/sec/.bash_history is a file!”
-./ifnested.sh: line 18: ^d: command not found
 
 ```
 
